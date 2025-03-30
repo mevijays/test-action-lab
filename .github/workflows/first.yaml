@@ -1,0 +1,22 @@
+name: my first workflow
+on:
+  workflow_dispatch:
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first step
+        run: echo "hello world"
+      - name: multiline
+        run: |
+          echo "first line"
+          echo "second line"
+      - name: setup java by action
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+  nextjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
