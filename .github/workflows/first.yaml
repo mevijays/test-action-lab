@@ -14,7 +14,8 @@ jobs:
       - name: setup java by action
         uses: actions/setup-java@v4
         with:
-          java-version: 17
+          java-version: '17'
+          distribution: 'zulu'
   nextjob:
     runs-on: ubuntu-latest
     steps:
